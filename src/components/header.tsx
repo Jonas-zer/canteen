@@ -4,7 +4,7 @@ import { INav } from "@/types/nav-t"
 
 const menu: INav[] = [
   { title: "Products meniu", slug: "Products meniu" },
-  { title: "Warehouses", slug: "Warehouses" },
+  { title: "Warehouse", slug: "Warehouse" },
   { title: "Meals", slug: "Meals" },
 ]
 
