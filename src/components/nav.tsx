@@ -1,6 +1,7 @@
 "use client"
 import { INav } from "@/types/nav-t"
 import { AcademicCapIcon, Bars4Icon } from "@heroicons/react/24/outline"
+import { BuildingStorefrontIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
 import { useState } from "react"
 
@@ -16,8 +17,8 @@ export function Nav(props: IProps) {
       <div className="max-w-screen-xl flex flex-wrap items-center gap-x-4 justify-between mx-auto p-4">
         <Link href={HOST} className="flex items-center space-x-3">
           <div className="flex gap-x-2">
-            <AcademicCapIcon className="h-8 w-8 stroke-orange-700" />
-            <div className="text-2xl text-orange-700 font-bold">AAS</div>
+            <BuildingStorefrontIcon className="h-16 w-16 stroke-black stroke-[1.5]" />
+            <div className="text-2xl text-orange-700 font-bold">CANTEEN</div>
           </div>
         </Link>
         <button
