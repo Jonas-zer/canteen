@@ -39,10 +39,10 @@ export function WarehouseTable(props: IProps) {
             Product
           </th>
           <th scope="col" className="px-6 py-3">
-            Kaina
+            Price
           </th>
           <th scope="col" className="px-6 py-3">
-            Kiekis
+            Quantity
           </th>
           <th scope="col" className="px-6 py-3">
             Actions
@@ -56,10 +56,18 @@ export function WarehouseTable(props: IProps) {
             <td className="px-6 py-4">{item.price}</td>
             <td className="px-6 py-4">{item.quantity}</td>
             <td className="px-6 py-4">
-              <button type="button" title="Edit" onClick={() => changeItem(item.id)}>
+              <button
+                type="button"
+                title="Edit"
+                onClick={() => changeItem(item.id)}
+              >
                 <PencilIcon className="w-5 h-5 stroke-blue-600" />
               </button>
-              <button type="button" title="Delete" onClick={() => deleteItem(item.id)}>
+              <button
+                type="button"
+                title="Delete"
+                onClick={() => deleteItem(item.id)}
+              >
                 <MinusIcon className="w-5 h-5 stroke-red-600" />
               </button>
             </td>

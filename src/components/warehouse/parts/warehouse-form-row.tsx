@@ -101,8 +101,8 @@ export function WarehouseFormRow(props: IProps) {
 
       <div className="min-w-[120px]">
         <TextField
-          label="Kaina"
-          name="price"
+          label="Price"
+          name="Price"
           type="number"
           isRequired={true}
           defaultValue={priceDefault}
@@ -112,8 +112,8 @@ export function WarehouseFormRow(props: IProps) {
 
       <div className="min-w-[120px]">
         <TextField
-          label="Kiekis"
-          name="quantity"
+          label="Quantity"
+          name="Quantity"
           type="number"
           isRequired={true}
           defaultValue={quantityDefault}
