@@ -1,14 +1,14 @@
 "use client"
-import { Form } from "./form"
-import { WarehouseList } from "./list"
 import { useEffect, useState } from "react"
 import { getApi } from "@/utils/server-api"
 import { IProduct } from "@/models/product-model"
 import { IWarehouse } from "@/models/warehouse-model"
+import { WarehouseFormRow } from "./parts/warehouse-form-row"
+import { WarehouseTable } from "./parts/warehouse-table"
 
 type IProps = { products: IProduct[] }
 
-export function Wrapper(props: IProps) {
+export function WarehouseView(props: IProps) {
   const { products } = props
   const [editItem, setEditItem] = useState<IWarehouse | undefined>()
   const [items, setItems] = useState<IWarehouse[]>([])
@@ -24,14 +24,16 @@ export function Wrapper(props: IProps) {
   }, [])
 
   return (
-    <div className="grid gap-y-8">
-      <Form
+    <div className="grid grid-flow-row gap-y-6">
+      <WarehouseFormRow
+        key={editItem?.id ?? "new"}
         products={products}
-        getItemsFromApi={getItemsFromApi}
-        setEditItem={setEditItem}
+        items={items}
         editItem={editItem}
+        setEditItem={setEditItem}
+        getItemsFromApi={getItemsFromApi}
       />
-      <WarehouseList
+      <WarehouseTable
         products={products}
         items={items}
         setEditItem={setEditItem}

@@ -9,7 +9,7 @@ type MongooseCache = {
 }
 
 declare global {
-  // eslint-disable-next-line no-var
+ 
   var __mongooseCache: MongooseCache | undefined
 }
 
@@ -21,10 +21,10 @@ export async function connectMongoose() {
 
   if (cache.conn) return cache.conn
   if (!cache.promise) {
-    // Check if MONGO_URI already contains query params
+    
     const separator = MONGO_URI.includes("?") ? "&" : "/"
     const connectionString = MONGO_URI.includes("?")
-      ? MONGO_URI // URI already has params, use as-is
+      ? MONGO_URI 
       : `${MONGO_URI}/${MONGO_DB}`
 
     cache.promise = mongoose.connect(connectionString, {

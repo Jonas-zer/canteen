@@ -12,11 +12,11 @@ type IProps = {
   getItemsFromApi: () => void
 }
 
-export function WarehouseList(props: IProps) {
+export function WarehouseTable(props: IProps) {
   const { products, items, setEditItem, getItemsFromApi } = props
 
   const findProductName = (id?: string) =>
-    products.find((i) => i.id === id)?.name
+    products.find((p) => p.id === id)?.name ?? "—"
 
   const changeItem = (id?: string) => {
     if (!id) return
@@ -39,10 +39,10 @@ export function WarehouseList(props: IProps) {
             Product
           </th>
           <th scope="col" className="px-6 py-3">
-            Price
+            Kaina
           </th>
           <th scope="col" className="px-6 py-3">
-            Quantity
+            Kiekis
           </th>
           <th scope="col" className="px-6 py-3">
             Actions
@@ -56,10 +56,10 @@ export function WarehouseList(props: IProps) {
             <td className="px-6 py-4">{item.price}</td>
             <td className="px-6 py-4">{item.quantity}</td>
             <td className="px-6 py-4">
-              <button title="Edit" onClick={() => changeItem(item.id)}>
+              <button type="button" title="Edit" onClick={() => changeItem(item.id)}>
                 <PencilIcon className="w-5 h-5 stroke-blue-600" />
               </button>
-              <button title="Delete" onClick={() => deleteItem(item.id)}>
+              <button type="button" title="Delete" onClick={() => deleteItem(item.id)}>
                 <MinusIcon className="w-5 h-5 stroke-red-600" />
               </button>
             </td>

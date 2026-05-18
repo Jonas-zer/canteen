@@ -1,4 +1,4 @@
-import { Wrapper } from "@/components/warehouse/wrapper"
+import { WarehouseView } from "@/components/warehouse/warehouse-view"
 import { ProductService } from "@/services/product-service"
 
 export const dynamic = "force-dynamic"
@@ -9,8 +9,8 @@ export default async function WarehousePage() {
 
   return (
     <div className="grid grid-flow-row gap-4">
-      <h1 className="font-bold text-xl">Warehouse</h1>
-      <Wrapper products={products ?? []} />
+      <h1 className="font-bold text-xl">Warehouse stock</h1>
+      <WarehouseView products={products ?? []} />
     </div>
   )
 }
