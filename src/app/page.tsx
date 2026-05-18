@@ -1,10 +1,9 @@
-export default function Home() {
+﻿export default function Home() {
   return (
-    <div className="grid grid-cols-4">
-      <div>Students</div>
-      <div>Schedules</div>
-      <div>Teachers</div>
-      <div>Information</div>
+    <div className="grid grid-cols-3 gap-4">
+      <div>Products menu</div>
+      <div>Warehouse</div>
+      <div>Dishes</div>
     </div>
   )
 }

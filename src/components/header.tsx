@@ -3,9 +3,9 @@ import { Nav } from "./nav"
 import { INav } from "@/types/nav-t"
 
 const menu: INav[] = [
-  { title: "Products meniu", slug: "Products meniu" },
-  { title: "Warehouse", slug: "Warehouse" },
-  { title: "Meals", slug: "Meals" },
+  { title: "Products menu", slug: "/products" },
+  { title: "Warehouse", slug: "/warehouse" },
+  { title: "Dishes", slug: "/dishes" },
 ]
 
 export async function Header() {

@@ -6,8 +6,8 @@ import { ReactNode } from "react"
 import { StoreProvider } from "@/components/providers/store-provider"
 
 export const metadata: Metadata = {
-  title: "Academic Achievements Tracker",
-  description: "Track and showcase your academic achievements with ease.",
+  title: "Canteen",
+  description: "Canteen warehouse and dishes management system.",
 }
 
 export default async function RootLayout({
